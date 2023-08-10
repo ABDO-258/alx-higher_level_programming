@@ -16,7 +16,16 @@ int main(void)
     int i;
 
     head = NULL;
-    add_nodeint(&head, 0);
+    
+	print_listint(head);
+    printf("----1----");
+
+	if (check_cycle(head) == 0)
+		printf("Linked list has no cycle\n");
+	else if (check_cycle(head) == 1)
+		printf("Linked list has a cycle\n");
+
+    /*add_nodeint(&head, 0);*/
     add_nodeint(&head, 1);
     add_nodeint(&head, 2);
     add_nodeint(&head, 3);
