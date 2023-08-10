@@ -16,12 +16,12 @@ int check_cycle(listint_t *list)
 		ptr2 = list->next;
 		while (ptr1 != NULL && ptr2 != NULL)
 		{
-			
-			printf("------------\n");
-			printf("ptr1 = %i\n", ptr1->n);
-			printf("ptr2 = %i\n", ptr2->n);
-			printf("------------\n");
-			
+			/**
+			* printf("------------\n");
+			* printf("ptr1 = %i\n", ptr1->n);
+			* printf("ptr2 = %i\n", ptr2->n);
+			* printf("------------\n");
+			*/
 			if (ptr1 == ptr2)
 				return (1);
 			ptr1 = ptr1->next;
