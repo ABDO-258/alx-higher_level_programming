@@ -3,6 +3,8 @@
 
 
 class Square:
+    ''' a class  square that have size and methode area  '''
+
     def __init__(self, size=0):
         '''
         intialize the class
