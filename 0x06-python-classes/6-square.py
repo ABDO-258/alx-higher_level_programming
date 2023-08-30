@@ -52,7 +52,9 @@ class Square:
 
     def my_print(self):
         """ methode to print the square"""
-        if self.__position[1] > 0:
+        if not self.__size:
+            print()
+        for g in range(self.__position[1]):
             print()
 
         for i in range(self.__size):
