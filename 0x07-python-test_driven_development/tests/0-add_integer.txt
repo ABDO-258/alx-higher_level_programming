@@ -1,0 +1,59 @@
+    import the function from python script
+    >>> add_integer = __import__('0-add_integer').add_integer
+    
+ test the function with 2 integers
+
+    >>> add_integer(4, 3)
+    7
+
+test the function with 2 float
+
+    >>> add_integer(4.2, 3.1)
+    7
+
+test the function with b as negative integer
+
+    >>> add_integer(100, -2)
+    98
+
+test the function with a only
+
+    >>> add_integer(2)
+    100
+
+test the function with a float and b negative integer
+    >>> add_integer(100.3, -2)
+    98
+
+test the function with a non number and b negative integer
+
+
+    >>> add_integer("two", -2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test the function with b non number 
+
+
+    >>> add_integer(10, "string")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+test the function with a non number 
+
+
+    >>> add_integer("string")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test the function with a== None  and b integer
+
+    >>> add_integer(None, 55)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test the function with a float and b== None   
+
+    >>> add_integer(2.3, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
