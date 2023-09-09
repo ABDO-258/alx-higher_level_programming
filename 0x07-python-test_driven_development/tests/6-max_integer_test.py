@@ -24,6 +24,10 @@ class TestMaxInteger(unittest.TestCase):
         list2 = [12]
         self.assertEqual(max_integer(list2), 12)
 
+    def test_list4(self):
+        list1 = [0]
+        self.assertEqual(max_integer(list1), 0)
+
     def test_string(self):
         list1 = "abdelhadi"
         self.assertEqual(max_integer(list1), 'l')
