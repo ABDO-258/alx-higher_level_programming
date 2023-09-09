@@ -27,6 +27,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_list4(self):
         list1 = [0]
         self.assertEqual(max_integer(list1), 0)
+        list2 = [12.9, 2.6, 3, 4.6]
+        self.assertEqual(max_integer(list2), 12.9)
 
     def test_string(self):
         list1 = "abdelhadi"
