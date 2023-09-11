@@ -14,7 +14,12 @@ import the class
 ::
 
     >>> my_list = Mylist()
+    >>> type(my_list)
+    <class '1-my_list.Mylist'>
     >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
+
     >>> my_list.append(4)
     >>> my_list.append(2)
     >>> my_list.append(3)
@@ -27,3 +32,15 @@ import the class
 
     >>> print(my_list)
     [1, 4, 2, 3, 5]
+
+
+
+    >>> a = [3, 9, 7]
+    >>> my_list2 = Mylist(a)
+    >>> my_list2.print_sorted()
+    [3, 7, 9]
+
+    >>> a = []
+    >>> my_list2 = Mylist(a)
+    >>> my_list2.print_sorted()
+    []
