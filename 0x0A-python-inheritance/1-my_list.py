@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""module of a sub class Mylist"""
+
+
 class Mylist(list):
     """ subclass Mylist """
 
