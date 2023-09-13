@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" modul of empty class BaseGeometry """
+""" modul of a class BaseGeometry """
 
 
 class BaseGeometry:
