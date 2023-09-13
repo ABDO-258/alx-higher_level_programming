@@ -3,7 +3,7 @@
 
 
 class Mylist(list):
-    """ subclass Mylist """
+    """ subclass Mylist of the parent list  """
 
     def print_sorted(self):
         """print the list in a sorted order"""
