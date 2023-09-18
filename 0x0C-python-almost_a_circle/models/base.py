@@ -77,7 +77,8 @@ class Base:
         for object in list_objs:
             if cls.__name__ == "Rectangle":
                 header = ["width", "height", "x", "y", "id"]
-                data =[object.width, object.height, object.x, object.y, object.id]
+                data = [object.width, object.height,
+                        object.x, object.y, object.id]
             elif cls.__name__ == "Square":
                 header = ["size", "x", "y", "id"]
                 data = [object.size, object.x, object.y, object.id]
@@ -104,7 +105,8 @@ class Base:
                     if cls.__name__ == "Rectangle":
                         # Create a Rectangle instance from the CSV data
                         width, height, x, y, obj_id = map(int, row)
-                        instance = cls(width=width, height=height, x=x, y=y, id=obj_id)
+                        instance = cls(width=width, height=height,
+                                       x=x, y=y, id=obj_id)
                     elif cls.__name__ == "Square":
                         # Create a Square instance from the CSV data
                         size, x, y, obj_id = map(int, row)
@@ -113,7 +115,3 @@ class Base:
                 return list_of_cls
         except FileNotFoundError:
             return []
-
-
-
-
