@@ -30,7 +30,7 @@ class Square(Rectangle):
         self.width = value
 
     def update(self, *args, **kwargs):
-        """ update a rectangle"""
+        """ update a square"""
         if args is not None and len(args) != 0:
             list_args = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
