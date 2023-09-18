@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ something """
 import json
+import csv
 
 
 class Base:
@@ -67,3 +68,52 @@ class Base:
                 return list_of_cls
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ that serializes and deserializes in CSV file """
+        filename = cls.__name__ + ".csv"
+        rows_data = []
+        for object in list_objs:
+            if cls.__name__ == "Rectangle":
+                header = ["width", "height", "x", "y", "id"]
+                data =[object.width, object.height, object.x, object.y, object.id]
+            elif cls.__name__ == "Square":
+                header = ["size", "x", "y", "id"]
+                data = [object.size, object.x, object.y, object.id]
+            rows_data.append(data)
+        with open(filename, mode="w") as myfile:
+            writing = csv.writer(myfile)
+            # the header
+            writing.writerow(header)
+            # object data
+            writing.writerows(rows_data)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ method that returns a list of instances"""
+        filename = cls.__name__ + ".csv"
+        list_of_cls = []
+        try:
+            with open(filename, mode="r") as myfile:
+                reader = csv.reader(myfile)
+
+                header = next(reader)
+
+                for row in reader:
+                    if cls.__name__ == "Rectangle":
+                        # Create a Rectangle instance from the CSV data
+                        width, height, x, y, obj_id = map(int, row)
+                        instance = cls(width=width, height=height, x=x, y=y, id=obj_id)
+                    elif cls.__name__ == "Square":
+                        # Create a Square instance from the CSV data
+                        size, x, y, obj_id = map(int, row)
+                        instance = cls(size=size, x=x, y=y, id=obj_id)
+                    list_of_cls.append(instance)
+                return list_of_cls
+        except FileNotFoundError:
+            return []
+
+
+
+
