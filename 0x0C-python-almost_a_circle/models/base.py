@@ -2,6 +2,7 @@
 """ something """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -115,3 +116,32 @@ class Base:
                 return list_of_cls
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Open a window and draw all Rectangles and Squares using Turtle."""
+        window = turtle.Screen()
+        window.title("Drawing Rectangles and Squares")
+
+        pen = turtle.Turtle()
+        pen.speed(1)  # Set the drawing speed (0 is fastest)
+        
+        for rect in list_rectangles:
+            pen.penup()  # Lift the pen
+            pen.goto(rect.x, rect.y)  # Move to the starting position
+            pen.pendown()  # Lower the pen
+            for _ in range(2):
+                pen.forward(rect.width)
+                pen.left(90)
+                pen.forward(rect.height)
+                pen.left(90)
+        
+        for square in list_squares:
+            pen.penup()  # Lift the pen
+            pen.goto(square.x, square.y)  # Move to the starting position
+            pen.pendown()  # Lower the pen
+            for _ in range(4):
+                pen.forward(square.size)
+                pen.left(90)
+        
+        turtle.done()  # Finish drawing
