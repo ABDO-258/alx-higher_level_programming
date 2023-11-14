@@ -7,6 +7,10 @@ function Factorial (n) {
   }
 }
 
-const myArg1 = parseInt(process.argv[2]);
-const result = Factorial(myArg1);
-console.log(result);
+if (process.argv[2]) {
+  const myArg1 = parseInt(process.argv[2]);
+  const result = Factorial(myArg1);
+  console.log(result);
+} else {
+  console.log(Factorial(0));
+}
