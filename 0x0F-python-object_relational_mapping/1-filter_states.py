@@ -15,7 +15,7 @@ def list_all_states(username, password, database):
         passwd=password,
         db=database)
     cursor = connection.cursor()
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
     cursor.execute(query)
     results = cursor.fetchall()
     for row in results:
