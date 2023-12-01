@@ -14,4 +14,4 @@ if __name__ == "__main__":
     req = request.Request(url, data=data_encode, method='POST')
     with request.urlopen(req) as response:
         decoded_response = response.read().decode("utf-8")
-        print(f"Your email is:{decoded_response}")
+        print(decoded_response)
