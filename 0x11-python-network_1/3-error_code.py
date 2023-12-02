@@ -16,4 +16,3 @@ if __name__ == "__main__":
             print(decoded_response)
     except HTTPError as error:
         print(f"Error code: {error.code}")
-
