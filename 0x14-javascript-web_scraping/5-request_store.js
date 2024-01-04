@@ -10,10 +10,8 @@ if (process.argv.length !== 4) {
 
 // Get the url from command-line arguments
 const WebUrl = process.argv[2];
-console.log(WebUrl);
-// Get the file path
+// Get the file path from command-line arguments
 const filePath = process.argv[3];
-console.log(filePath);
 // make a request to url
 request.get(WebUrl, (error, response, body) => {
   if (error) {
