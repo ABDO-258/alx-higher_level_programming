@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // Check the arguments are 3
 if (process.argv.length !== 4) {
-  console.error('Usage: node 1-writeme.js <file-path> "string to write"' );
+  console.error('Usage: node 1-writeme.js <file-path> "string to write"');
   process.exit(1);
 }
 
@@ -11,10 +11,10 @@ if (process.argv.length !== 4) {
 const filePath = process.argv[2];
 
 // Get the string to write
-const str_write = process.argv[3]
+const StrWrite = process.argv[3];
 
 // write the content to the file in utf-8
-fs.writeFile(filePath, str_write, 'utf-8', (err) => {
+fs.writeFile(filePath, StrWrite, 'utf-8', (err) => {
   if (err) {
     console.error(err);
   }

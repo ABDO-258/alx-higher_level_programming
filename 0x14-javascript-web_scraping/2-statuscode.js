@@ -10,7 +10,7 @@ if (process.argv.length !== 3) {
 // Get the url from command-line arguments
 const url = process.argv[2];
 
-//make a request to url
+// make a request to url
 request.get(url, (error, response) => {
   if (error) {
     console.error(error);
